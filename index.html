@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VeriFox | Scam Safety Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark">
+        <img src="public/Logo_Transparency.png" alt="VeriFox logo" />
+      </div>
+      <div>
+        <strong>VeriFox</strong>
+        <p>AI scam assistant for Singapore</p>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="mobile-menu-toggle" aria-expanded="false">Menu</button>
+  </header>
+
+  <main>
+    <section class="hero split">
+      <div class="hero-copy">
+        <span class="eyebrow">Trusted Singapore scam safety</span>
+        <h1>VeriFox helps you check suspicious messages, links, files and calls.</h1>
+        <p>AI-powered guidance for Singapore users who want to spot scams, understand the risk, and get clear next steps before they click, reply or share sensitive information.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="features.html#scam-question">Try the assistant</a>
+          <a class="btn btn-secondary" href="features.html#message-checker">Check suspicious content</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="panel-card">
+          <h2>How VeriFox works</h2>
+          <ul>
+            <li>Ask scam-related questions with Singapore-aware answers</li>
+            <li>Paste suspicious messages or links for instant review</li>
+            <li>Upload screenshots, PDFs or short videos for analysis</li>
+            <li>Use voice input for fast, hands-free checks</li>
+          </ul>
+        </div>
+        <div class="panel-card glow-card">
+          <p class="score-label">Example risk score</p>
+          <div class="score-meter">90<span>/100</span></div>
+          <p class="score-text"><strong>Critical</strong> — likely scam content. Verify before sharing or clicking.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-grid" id="top-features">
+      <article>
+        <h3>Scam Question Assistant</h3>
+        <p>Ask VeriFox common scam questions and get plain-language advice with Singapore-specific reporting and safety guidance.</p>
+      </article>
+      <article>
+        <h3>Message &amp; Link Checker</h3>
+        <p>Paste suspicious SMS, WhatsApp, email or link content to see risk signals, scam type hints and clear next steps.</p>
+      </article>
+      <article>
+        <h3>File &amp; Video Review</h3>
+        <p>Upload screenshots, documents or video evidence to check whether the content contains scam warning signs.</p>
+      </article>
+      <article>
+        <h3>Voice Assistant</h3>
+        <p>Talk to VeriFox directly and get follow-up questions that help uncover common scam tactics and red flags.</p>
+      </article>
+    </section>
+
+    <section class="callout">
+      <h2>Designed for Singapore users who need fast scam clarity.</h2>
+      <p>VeriFox is built to reduce uncertainty, so people can make safer decisions before they share OTPs, bank details, money, or personal information.</p>
+      <a class="btn btn-primary" href="features.html">Explore features</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>VeriFox • Scam safety assistant for Singapore • © 2026</p>
+  </footer>
+
+  <div class="ai-bottom-bar" id="ai-bottom-bar">
+    <button id="ai-bar-toggle">AI Functions</button>
+    <div class="ai-popup" id="ai-popup">
+      <p>Jump to product tools</p>
+      <div class="ai-buttons">
+        <button data-target="scam-question">Scam Question</button>
+        <button data-target="message-checker">Message Checker</button>
+        <button data-target="link-checker">Link Checker</button>
+        <button data-target="file-checker">File Checker</button>
+        <button data-target="voice-assistant">Voice Assistant</button>
+        <button data-target="report-generator">Generate Report</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

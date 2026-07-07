@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VeriFox Features | Scam Safety Tools</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark">
+        <img src="public/Logo_Transparency.png" alt="VeriFox logo" />
+      </div>
+      <div>
+        <strong>VeriFox</strong>
+        <p>Product features</p>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="mobile-menu-toggle" aria-expanded="false">Menu</button>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <span class="eyebrow">Product tools</span>
+      <h1>Use VeriFox to understand scam risk in seconds.</h1>
+      <p>These pages bring together the core experiences from the demo: question answering, content checking, file review, voice input, and report generation.</p>
+    </section>
+
+    <section class="feature-stack">
+      <article class="feature-card" id="scam-question">
+        <h2>Scam question assistant</h2>
+        <p>Ask a question such as “Is this SMS from Singpass?” and get short, plain-language guidance.</p>
+        <div class="tool-panel">
+          <textarea placeholder="Ask VeriFox about a suspicious message, caller, or link..."></textarea>
+          <button class="btn btn-primary">Ask now</button>
+        </div>
+        <div class="result-box">Suggested answer: “Treat this as suspicious until verified. Do not click links or share OTPs.”</div>
+      </article>
+
+      <article class="feature-card" id="message-checker">
+        <h2>Message &amp; link checker</h2>
+        <p>Paste suspicious SMS, WhatsApp or email text to review the most common scam patterns.</p>
+        <div class="tool-panel">
+          <textarea placeholder="Paste the message or link here..."></textarea>
+          <button class="btn btn-secondary">Check content</button>
+        </div>
+        <div class="result-box">Risk score: 84/100 — urgent caution and verify through official channels.</div>
+      </article>
+
+      <article class="feature-card" id="link-checker">
+        <h2>Link safety review</h2>
+        <p>Check suspicious URLs for signs of phishing, impersonation, or fake login pages.</p>
+        <div class="tool-panel">
+          <input type="text" placeholder="https://example.com" />
+          <button class="btn btn-primary">Scan link</button>
+        </div>
+        <div class="result-box">Warning: the domain looks similar to a trusted service, but the page path is not verified.</div>
+      </article>
+
+      <article class="feature-card" id="file-checker">
+        <h2>File &amp; screenshot review</h2>
+        <p>Upload screenshots, PDF documents, or short videos for a quick scam-risk review.</p>
+        <div class="tool-panel">
+          <input type="file" />
+          <button class="btn btn-secondary">Review file</button>
+        </div>
+        <div class="result-box">Detected signs: pressure tactics, urgency, requests for personal details.</div>
+      </article>
+
+      <article class="feature-card" id="voice-assistant">
+        <h2>Voice assistant</h2>
+        <p>Use speech input when typing feels inconvenient or when you want faster support.</p>
+        <div class="tool-panel">
+          <button class="btn btn-primary">Start voice check</button>
+        </div>
+        <div class="result-box">Voice mode is ready. Say “is this a scam?” to begin.</div>
+      </article>
+
+      <article class="feature-card" id="report-generator">
+        <h2>Report generator</h2>
+        <p>Download a simple report that summarises the findings and recommended next steps.</p>
+        <div class="tool-panel">
+          <button class="btn btn-primary">Generate report</button>
+        </div>
+        <div class="result-box">PDF export ready for chat, family, or evidence sharing.</div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>VeriFox • Scam safety assistant • © 2026</p>
+  </footer>
+
+  <div class="ai-bottom-bar" id="ai-bottom-bar">
+    <button id="ai-bar-toggle">AI Functions</button>
+    <div class="ai-popup" id="ai-popup">
+      <p>Jump to product tools</p>
+      <div class="ai-buttons">
+        <button data-target="scam-question">Scam Question</button>
+        <button data-target="message-checker">Message Checker</button>
+        <button data-target="link-checker">Link Checker</button>
+        <button data-target="file-checker">File Checker</button>
+        <button data-target="voice-assistant">Voice Assistant</button>
+        <button data-target="report-generator">Generate Report</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
