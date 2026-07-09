@@ -14,7 +14,7 @@
       </div>
       <div>
         <strong>VeriFox</strong>
-        <p>Product features</p>
+        <p>Ask VeriFox before you trust.</p>
       </div>
     </div>
     <nav class="site-nav" aria-label="Primary">
@@ -30,23 +30,23 @@
     <section class="page-intro">
       <span class="eyebrow">Product tools</span>
       <h1>Use VeriFox to understand scam risk in seconds.</h1>
-      <p>These pages bring together the core experiences from the demo: question answering, content checking, file review, voice input, and report generation.</p>
+      <p>VeriFox lets you ask general scam-related questions, paste suspicious messages or links, or upload screenshots of suspicious messages or websites to receive a scam risk analysis.</p>
     </section>
 
     <section class="feature-stack">
       <article class="feature-card" id="scam-question">
-        <h2>Scam question assistant</h2>
-        <p>Ask a question such as “Is this SMS from Singpass?” and get short, plain-language guidance.</p>
+        <h2>1. Scam Q&amp;A Chatbot</h2>
+        <p>Ask VeriFox general questions about scams in Singapore, such as &ldquo;What is phishing?&rdquo; or &ldquo;Can police officers ask me to transfer money?&rdquo; The chatbot answers using Singapore scam safety knowledge.</p>
         <div class="tool-panel">
           <textarea placeholder="Ask VeriFox about a suspicious message, caller, or link..."></textarea>
           <button class="btn btn-primary">Ask now</button>
         </div>
-        <div class="result-box">Suggested answer: “Treat this as suspicious until verified. Do not click links or share OTPs.”</div>
+        <div class="result-box">Suggested answer: &ldquo;Treat this as suspicious until verified. Do not click links or share OTPs.&rdquo;</div>
       </article>
 
       <article class="feature-card" id="message-checker">
-        <h2>Message &amp; link checker</h2>
-        <p>Paste suspicious SMS, WhatsApp or email text to review the most common scam patterns.</p>
+        <h2>2. Suspicious Message and Link Checker</h2>
+        <p>Paste a suspicious message or link. VeriFox returns a risk score, risk level, possible scam type, summary, red flags found, recommended actions, and a Singapore scam guidance reference.</p>
         <div class="tool-panel">
           <textarea placeholder="Paste the message or link here..."></textarea>
           <button class="btn btn-secondary">Check content</button>
@@ -54,65 +54,188 @@
         <div class="result-box">Risk score: 84/100 — urgent caution and verify through official channels.</div>
       </article>
 
-      <article class="feature-card" id="link-checker">
-        <h2>Link safety review</h2>
-        <p>Check suspicious URLs for signs of phishing, impersonation, or fake login pages.</p>
+      <article class="feature-card" id="screenshot-checker">
+        <h2>3. Screenshot Checker</h2>
+        <p>Upload a screenshot of a suspicious message, website, email, or chat &mdash; for example an SMS scam, WhatsApp scam, Telegram message, or fake bank login page. VeriFox extracts the visible text and analyses it for scam risk.</p>
         <div class="tool-panel">
-          <input type="text" placeholder="https://example.com" />
-          <button class="btn btn-primary">Scan link</button>
-        </div>
-        <div class="result-box">Warning: the domain looks similar to a trusted service, but the page path is not verified.</div>
-      </article>
-
-      <article class="feature-card" id="file-checker">
-        <h2>File &amp; screenshot review</h2>
-        <p>Upload screenshots, PDF documents, or short videos for a quick scam-risk review.</p>
-        <div class="tool-panel">
-          <input type="file" />
-          <button class="btn btn-secondary">Review file</button>
+          <input type="file" accept="image/*" />
+          <button class="btn btn-secondary">Review screenshot</button>
         </div>
         <div class="result-box">Detected signs: pressure tactics, urgency, requests for personal details.</div>
       </article>
 
-      <article class="feature-card" id="voice-assistant">
-        <h2>Voice assistant</h2>
-        <p>Use speech input when typing feels inconvenient or when you want faster support.</p>
-        <div class="tool-panel">
-          <button class="btn btn-primary">Start voice check</button>
+      <article class="feature-card" id="risk-score">
+        <h2>4. Risk Score and Risk Level</h2>
+        <p>VeriFox gives a score from 0 to 100 so you can quickly understand the danger level.</p>
+        <div class="risk-table">
+          <div class="risk-row risk-head">
+            <span>Score</span>
+            <span>Risk Level</span>
+            <span>Meaning</span>
+          </div>
+          <div class="risk-row risk-low">
+            <span>0–25</span>
+            <span>Low</span>
+            <span>Few scam signs found</span>
+          </div>
+          <div class="risk-row risk-medium">
+            <span>26–50</span>
+            <span>Medium</span>
+            <span>Some suspicious signs found</span>
+          </div>
+          <div class="risk-row risk-high">
+            <span>51–75</span>
+            <span>High</span>
+            <span>Many scam signs found</span>
+          </div>
+          <div class="risk-row risk-critical">
+            <span>76–100</span>
+            <span>Critical</span>
+            <span>Strong scam signs or immediate danger</span>
+          </div>
         </div>
-        <div class="result-box">Voice mode is ready. Say “is this a scam?” to begin.</div>
+      </article>
+
+      <article class="feature-card" id="warning-signs">
+        <h2>5. Scam Warning Sign Explanation</h2>
+        <p>VeriFox explains why something may be suspicious, instead of giving a plain yes/no answer.</p>
+        <div class="result-box">&ldquo;This message appears suspicious because it uses urgent language, claims your account is locked, and asks you to click an unknown link. These are common warning signs of phishing scams.&rdquo;</div>
+      </article>
+
+      <article class="feature-card" id="safety-actions">
+        <h2>6. Recommended Safety Actions</h2>
+        <p>Clear next steps, such as:</p>
+        <ul class="action-list">
+          <li>Do not click the link</li>
+          <li>Do not reply to the sender</li>
+          <li>Do not share OTPs, passwords, Singpass details, or bank details</li>
+          <li>Do not transfer money</li>
+          <li>Verify through official websites, official apps, or official hotlines</li>
+          <li>Contact the bank immediately if sensitive information was shared</li>
+          <li>Make a police report if money was lost</li>
+        </ul>
+      </article>
+
+      <article class="feature-card" id="two-agent">
+        <h2>7. Two-Agent Verification</h2>
+        <p>VeriFox uses two AI agents for safer results.</p>
+        <div class="agent-grid">
+          <div class="agent-card">
+            <h3>Agent 1: Scam Risk Analyser</h3>
+            <p>Checks the submitted message, link, or screenshot and identifies scam signs.</p>
+          </div>
+          <div class="agent-card">
+            <h3>Agent 2: Safety Verifier</h3>
+            <p>Reviews Agent 1's result before showing it to the user. It checks whether the risk score, explanation, and advice are reasonable and safe.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature-card" id="knowledge-base">
+        <h2>8. Singapore Scam Knowledge Base</h2>
+        <p>VeriFox uses Singapore scam-safety knowledge through retrieval-augmented generation (RAG). The knowledge base includes information about:</p>
+        <ul class="kb-list">
+          <li>Phishing scams</li>
+          <li>Bank impersonation scams</li>
+          <li>Government or police impersonation scams</li>
+          <li>Delivery scams</li>
+          <li>Job scams</li>
+          <li>OTP and password safety</li>
+          <li>Suspicious links</li>
+          <li>What to do after sharing sensitive information</li>
+          <li>What to do after transferring money</li>
+          <li>ScamShield and Singapore scam safety guidance</li>
+        </ul>
       </article>
 
       <article class="feature-card" id="report-generator">
-        <h2>Report generator</h2>
-        <p>Download a simple report that summarises the findings and recommended next steps.</p>
+        <h2>9. PDF Report Generation</h2>
+        <p>After a scam check is completed, generate a downloadable report with the risk score, risk level, possible scam type, summary, red flags found, recommended actions, Singapore scam guidance used, verification note, and disclaimer.</p>
         <div class="tool-panel">
           <button class="btn btn-primary">Generate report</button>
         </div>
         <div class="result-box">PDF export ready for chat, family, or evidence sharing.</div>
+        <p class="feature-note">Note: this feature is PDF report generation only. The current version does not allow users to upload PDFs for scam checking.</p>
       </article>
+    </section>
+
+    <section class="example-result">
+      <span class="eyebrow">Sample result</span>
+      <h2>What a VeriFox result looks like</h2>
+      <div class="result-card">
+        <div class="result-card-header">
+          <div class="result-score critical">
+            <span class="result-score-value">88</span>
+            <span class="result-score-max">/100</span>
+          </div>
+          <div>
+            <p class="result-level">Risk Level: <strong>High</strong></p>
+            <p class="result-type">Possible Scam Type: <strong>Bank Phishing</strong></p>
+          </div>
+        </div>
+        <div class="result-card-body">
+          <h3>Summary</h3>
+          <p>This message appears suspicious because it claims your bank account is locked and asks you to click an unknown link.</p>
+          <h3>Red Flags</h3>
+          <ul>
+            <li>Urgent wording</li>
+            <li>Suspicious link</li>
+            <li>Bank impersonation</li>
+            <li>Request for sensitive information</li>
+          </ul>
+          <h3>Recommended Actions</h3>
+          <ul>
+            <li>Do not click the link</li>
+            <li>Do not share OTPs or passwords</li>
+            <li>Verify through official bank channels</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="future-implementation" id="future-implementation">
+      <span class="eyebrow">Coming soon</span>
+      <h2>Future implementation</h2>
+      <p>These features were removed from the current scope to keep the project focused, and are planned for future versions after the chatbot and screenshot checker are stable.</p>
+      <div class="teaser-grid">
+        <article>
+          <h3>PDF Upload Checking</h3>
+          <p>Upload suspicious PDF documents such as fake invoices, job contracts, bank notices, delivery documents, or government letters. VeriFox will extract the text and analyse it for scam signs.</p>
+        </article>
+        <article>
+          <h3>Send to Relative</h3>
+          <p>Send high-risk scam analysis results to a trusted relative via Telegram, WhatsApp, or email &mdash; useful when an elderly user needs a family member's help.</p>
+        </article>
+        <article>
+          <h3>Voice Assistant</h3>
+          <p>Describe a scam situation by speaking. The voice assistant asks follow-up questions and sends the transcript for scam analysis.</p>
+        </article>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>VeriFox • Scam safety assistant • © 2026</p>
+    <p><strong>VeriFox</strong> &mdash; &ldquo;Ask VeriFox before you trust.&rdquo;</p>
+    <p>Scam safety assistant for Singapore &bull; &copy; 2026</p>
   </footer>
 
   <div class="ai-bottom-bar" id="ai-bottom-bar">
-    <button id="ai-bar-toggle">AI Functions</button>
+    <button id="ai-bar-toggle">Quick Tools</button>
     <div class="ai-popup" id="ai-popup">
       <p>Jump to product tools</p>
       <div class="ai-buttons">
         <button data-target="scam-question">Scam Question</button>
         <button data-target="message-checker">Message Checker</button>
-        <button data-target="link-checker">Link Checker</button>
-        <button data-target="file-checker">File Checker</button>
-        <button data-target="voice-assistant">Voice Assistant</button>
+        <button data-target="screenshot-checker">Screenshot Checker</button>
         <button data-target="report-generator">Generate Report</button>
       </div>
     </div>
   </div>
 
   <script src="script.js"></script>
+
+  <!-- Botpress Webchat -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2026/07/06/12/20260706125051-XEEGPYD7.js" defer></script>
 </body>
 </html>

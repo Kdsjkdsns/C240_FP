@@ -1,95 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About VeriFox | Scam Risk Intelligence</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="brand">
-      <div class="brand-mark">
-        <img src="public/Logo_Transparency.png" alt="VeriFox logo" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About VeriFox | AI Scam Safety Chatbot for Singapore Users</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">
+          <img src="public/Logo_Transparency.png" alt="VeriFox logo" />
+        </div>
+        <div>
+          <strong>VeriFox</strong>
+          <p>Ask VeriFox before you trust.</p>
+        </div>
       </div>
-      <div>
-        <strong>VeriFox</strong>
-        <p>Scam risk assistant</p>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="mobile-menu-toggle" aria-expanded="false">
+        Menu
+      </button>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <span class="eyebrow">Problem and purpose</span>
+        <h1>Why VeriFox exists</h1>
+        <p>
+          People in Singapore often receive suspicious messages, links,
+          screenshots, emails, and online scam attempts. These scams may pretend
+          to be from banks, government agencies, delivery services, job
+          recruiters, or police officers.
+        </p>
+      </section>
+
+      <section class="problems">
+        <article>
+          <h2>The problem</h2>
+          <p>
+            Many users may not know whether a message is safe or dangerous. This
+            can lead to users clicking phishing links, sharing OTPs or
+            passwords, giving bank details, installing unsafe apps, or
+            transferring money to scammers.
+          </p>
+        </article>
+        <article>
+          <h2>The need</h2>
+          <p>
+            People want a simple assistant that explains whether content is
+            suspicious, why it looks suspicious, and how to stay safe without
+            jargon or overconfidence.
+          </p>
+        </article>
+      </section>
+
+      <section class="solution">
+        <h2>VeriFox solution</h2>
+        <p>
+          VeriFox gives users a simple way to check suspicious content and
+          receive clear, Singapore-focused scam safety guidance.
+        </p>
+        <ul>
+          <li>Ask scam questions backed by Singapore scam-safety knowledge</li>
+          <li>Check suspicious messages, links, and screenshots</li>
+          <li>
+            Receive a scam risk score, explanation, and recommended actions
+          </li>
+          <li>Get results reviewed by a second AI safety checker</li>
+          <li>Download a PDF report for records or evidence</li>
+        </ul>
+      </section>
+
+      <section class="audience">
+        <span class="eyebrow">Who it's for</span>
+        <h2>Target audience</h2>
+        <div class="audience-table">
+          <div class="audience-row audience-head">
+            <span>Target User</span>
+            <span>Reason</span>
+          </div>
+          <div class="audience-row">
+            <span>Students</span>
+            <span
+              >May receive fake job offers, phishing links, scam messages, or
+              fake giveaways</span
+            >
+          </div>
+          <div class="audience-row">
+            <span>Elderly users</span>
+            <span
+              >May be more vulnerable to scam calls and impersonation
+              messages</span
+            >
+          </div>
+          <div class="audience-row">
+            <span>General Singapore users</span>
+            <span
+              >May receive scam SMS, WhatsApp, Telegram, email, or website
+              links</span
+            >
+          </div>
+          <div class="audience-row">
+            <span>Families</span>
+            <span
+              >Can use VeriFox to help check suspicious messages for
+              relatives</span
+            >
+          </div>
+          <div class="audience-row">
+            <span>Non-technical users</span>
+            <span>Need simple explanations and clear safety actions</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="values">
+        <article>
+          <h3>Clear guidance</h3>
+          <p>
+            VeriFox focuses on warning signs and safety actions, not just a
+            binary yes/no answer.
+          </p>
+        </article>
+        <article>
+          <h3>Singapore aware</h3>
+          <p>
+            Advice reflects local scam behaviours, reporting channels, and
+            examples that resonate with users in Singapore.
+          </p>
+        </article>
+        <article>
+          <h3>Trusted tone</h3>
+          <p>
+            The assistant is calm, practical and designed to reduce fear while
+            staying truthful about risk.
+          </p>
+        </article>
+      </section>
+
+      <section class="disclaimer">
+        <h2>Disclaimer</h2>
+        <p>
+          VeriFox provides scam safety guidance based on available information
+          and retrieved scam-safety knowledge. It does not replace official
+          advice from banks, government agencies, ScamShield, or the Singapore
+          Police Force. If you believe you have lost money or shared sensitive
+          information, contact your bank and official authorities immediately.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <strong>VeriFox</strong> &mdash; &ldquo;Ask VeriFox before you
+        trust.&rdquo;
+      </p>
+      <p>Scam safety assistant for Singapore &bull; &copy; 2026</p>
+    </footer>
+
+    <div class="ai-bottom-bar" id="ai-bottom-bar">
+      <button id="ai-bar-toggle">Quick Tools</button>
+      <div class="ai-popup" id="ai-popup">
+        <p>Jump to product tools</p>
+        <div class="ai-buttons">
+          <a href="features.html#scam-question">Scam Question</a>
+          <a href="features.html#message-checker">Message Checker</a>
+          <a href="features.html#screenshot-checker">Screenshot Checker</a>
+          <a href="features.html#report-generator">Generate Report</a>
+        </div>
       </div>
     </div>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button class="menu-toggle" id="mobile-menu-toggle" aria-expanded="false">Menu</button>
-  </header>
 
-  <main>
-    <section class="page-intro">
-      <span class="eyebrow">Problem and purpose</span>
-      <h1>Why VeriFox exists</h1>
-      <p>Many people in Singapore receive suspicious messages, calls and documents that look real. VeriFox gives users a fast way to check whether content is likely a scam and what to do next.</p>
-    </section>
+    <script src="script.js"></script>
 
-    <section class="problems">
-      <article>
-        <h2>The problem</h2>
-        <p>Scammers impersonate banks, government agencies, police, delivery services and recruiters. Users can be pressured to share OTPs, bank details, passwords or transfer money before they verify the message.</p>
-      </article>
-      <article>
-        <h2>The need</h2>
-        <p>People want a simple assistant that explains whether content is suspicious, why it looks suspicious, and how to stay safe without jargon or overconfidence.</p>
-      </article>
-    </section>
-
-    <section class="solution">
-      <h2>VeriFox solution</h2>
-      <ul>
-        <li>Ask scam questions backed by Singapore fraud guidance</li>
-        <li>Check suspicious text, links, screenshots, documents and videos</li>
-        <li>Receive a scam risk score, explanation, and recommended actions</li>
-        <li>Use voice input when typing is inconvenient</li>
-        <li>Download a report for relatives or evidence</li>
-      </ul>
-    </section>
-
-    <section class="values">
-      <article>
-        <h3>Clear guidance</h3>
-        <p>VeriFox focuses on warning signs and safety actions, not just a binary yes/no answer.</p>
-      </article>
-      <article>
-        <h3>Singapore aware</h3>
-        <p>Advice reflects local scam behaviours, reporting channels, and examples that resonate with users in Singapore.</p>
-      </article>
-      <article>
-        <h3>Trusted tone</h3>
-        <p>The assistant is calm, practical and designed to reduce fear while staying truthful about risk.</p>
-      </article>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>VeriFox • Scam safety assistant • © 2026</p>
-  </footer>
-
-  <div class="ai-bottom-bar" id="ai-bottom-bar">
-    <button id="ai-bar-toggle">AI Functions</button>
-    <div class="ai-popup" id="ai-popup">
-      <p>Quick access tools</p>
-      <div class="ai-buttons">
-        <button data-target="scam-question">Scam Question</button>
-        <button data-target="message-checker">Message Checker</button>
-        <button data-target="link-checker">Link Checker</button>
-        <button data-target="file-checker">File Checker</button>
-        <button data-target="voice-assistant">Voice Assistant</button>
-        <button data-target="report-generator">Generate Report</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <!-- Botpress Webchat -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <script
+      src="https://files.bpcontent.cloud/2026/07/06/12/20260706125051-XEEGPYD7.js"
+      defer
+    ></script>
+  </body>
 </html>

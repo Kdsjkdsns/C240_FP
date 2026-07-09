@@ -1,14 +1,25 @@
 # VeriFox
 
-VeriFox is a branded static website demo for an AI-powered scam safety assistant. It includes multiple linked pages, a responsive layout, and an interactive bottom AI function bar.
+VeriFox: AI Scam Safety Chatbot for Singapore Users.
+
+VeriFox is an AI scam safety chatbot for Singapore users. It helps users check suspicious messages, links, and screenshots, then gives a risk score, explains the scam warning signs, and recommends safe actions. VeriFox uses Singapore scam-safety knowledge and a second AI checker to make the advice more reliable.
+
+**Tagline:** Ask VeriFox before you trust.
+
+This repo is the static marketing website. The actual chatbot experience is powered by a Botpress webchat bubble embedded on every page, backed by an n8n workflow, Supabase vector knowledge base, and a two-agent (analyser + verifier) AI pipeline. See `features.html` for the full feature breakdown and system flow.
 
 ## Files
-- `index.html` — Hero landing page and product overview.
-- `features.html` — Interactive product tools and sample AI checks.
-- `about.html` — Problem statement, solution, and values.
-- `contact.html` — Contact and deployment guidance.
-- `styles.css` — Global styling, responsive layout, and bottom function bar.
-- `script.js` — Page interactions, tool simulation, voice assistant fallback, and PDF generation.
+- `index.html` — Hero landing page, problem statement, feature preview, how-it-works, and disclaimer.
+- `features.html` — Full feature breakdown (Q&A, message/link checker, screenshot checker, risk score, two-agent verification, knowledge base, PDF report), sample result, and future implementation.
+- `about.html` — Problem statement, target audience, solution, and values.
+- `contact.html` — Getting started, local run, and deployment guidance.
+- `styles.css` — Global styling and responsive layout.
+- `script.js` — Mobile nav toggle, quick-tools popup, and smooth-scroll navigation.
+
+## Current scope
+Working: Scam Q&A chatbot, message/link checker, screenshot checker, risk score & level, warning-sign explanations, recommended safety actions, two-agent verification, Singapore scam knowledge base (RAG), PDF report generation.
+
+Not yet implemented (planned): PDF upload checking, send-to-relative alerts (Telegram/WhatsApp/email), voice assistant.
 
 ## Run locally
 1. Open any of the HTML files in your browser.
@@ -16,7 +27,6 @@ VeriFox is a branded static website demo for an AI-powered scam safety assistant
 
 ### Using Python
 ```powershell
-cd "c:\Users\sbpma\OneDrive\Document\C240 AI Essentials and Innovations\Projects\Final Project"
 python -m http.server 8000
 ```
 Open `http://localhost:8000` in your browser.
@@ -27,6 +37,5 @@ Open `http://localhost:8000` in your browser.
 3. Visit the published URL once the site is available.
 
 ## Notes
-- The site is a static demo and uses browser-side interactions only.
-- Voice recognition works best in Chrome or Edge with microphone permission.
-- PDF report generation uses `jspdf` for client-side export.
+- The site is a static front-end; the chat bubble (Botpress) handles the live scam-check flow.
+- Voice assistant, PDF upload checking, and send-to-relative are future enhancements — not part of the current build.

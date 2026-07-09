@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VeriFox | Scam Safety Command Center</title>
+  <meta name="description" content="VeriFox is an AI scam safety chatbot for Singapore users. Check suspicious messages, links and screenshots, get a risk score, and clear safety actions." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary">
+      <div class="sidebar-logo" title="VeriFox">
+        <span aria-hidden="true">🦊</span>
+      </div>
+      <nav class="sidebar-nav">
+        <button class="sidebar-btn active" data-sidebar="dashboard" title="Dashboard" aria-label="Dashboard">
+          <span aria-hidden="true">▦</span>
+        </button>
+        <button class="sidebar-btn" data-sidebar="scam-check" title="Scam Check" aria-label="Scam Check">
+          <span aria-hidden="true">〰</span>
+        </button>
+        <button class="sidebar-btn" data-sidebar="reports" title="Reports" aria-label="Reports">
+          <span aria-hidden="true">▣</span>
+        </button>
+        <button class="sidebar-btn" data-sidebar="knowledge" title="Knowledge" aria-label="Knowledge">
+          <span aria-hidden="true">◇</span>
+        </button>
+        <button class="sidebar-btn" data-sidebar="users" title="Users" aria-label="Users">
+          <span aria-hidden="true">👥</span>
+        </button>
+      </nav>
+      <div class="sidebar-nav sidebar-nav-bottom">
+        <button class="sidebar-btn" data-sidebar="settings" title="Settings" aria-label="Settings">
+          <span aria-hidden="true">⚙</span>
+        </button>
+        <button class="sidebar-btn" data-sidebar="help" title="Help" aria-label="Help">
+          <span aria-hidden="true">?</span>
+        </button>
+        <button class="sidebar-btn" data-sidebar="exit" title="Exit" aria-label="Exit">
+          <span aria-hidden="true">↪</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-dashboard">
+      <header class="top-nav">
+        <div class="nav-tabs" role="tablist" aria-label="Dashboard sections">
+          <button class="nav-tab active" data-tab="overview">Overview</button>
+          <button class="nav-tab" data-tab="scam-check">Scam Check</button>
+          <button class="nav-tab" data-tab="knowledge">Knowledge</button>
+          <button class="nav-tab" data-tab="reports">Reports</button>
+          <button class="nav-tab" data-tab="future-plan">Future Plan</button>
+        </div>
+
+        <form class="search-bar" id="search-form">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input type="text" id="search-input" placeholder="Search scam topics" aria-label="Search scam topics" />
+        </form>
+
+        <div class="top-nav-actions">
+          <button class="icon-btn" id="notif-btn" title="Notifications" aria-label="Notifications">
+            <span aria-hidden="true">🔔</span>
+            <span class="notif-dot"></span>
+          </button>
+          <div class="profile-pill">
+            <span class="profile-avatar">DT</span>
+            <span class="profile-info">
+              <strong>Daniel Tun</strong>
+              <small>VeriFox User</small>
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <p class="search-feedback" id="search-feedback" role="status"></p>
+
+      <section class="hero-section">
+        <div class="hero-text">
+          <span class="eyebrow">Scam safety command center</span>
+          <h1>Hi, welcome to VeriFox</h1>
+          <p class="hero-tagline">Ask VeriFox before you trust.</p>
+          <p class="hero-sub">Check suspicious messages, links, and screenshots using AI-powered scam risk analysis for Singapore users.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="start-check-btn">Start Scam Check</button>
+            <button class="btn btn-ghost" id="demo-btn">View Demo Result</button>
+          </div>
+          <p class="hero-note" id="start-check-note" hidden>Click the VeriFox chat bubble in the bottom-right corner to start your scam check.</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-orb">
+            <span class="hero-orb-icon">🛡️</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="card risk-overview-card">
+          <div class="card-head">
+            <h2>Current Scam Risk Check</h2>
+            <span class="badge badge-live">Live</span>
+          </div>
+          <div class="risk-score-display">
+            <div class="risk-ring" style="--pct: 88;">
+              <div class="risk-ring-inner">
+                <span class="risk-value" data-count-to="88">0</span>
+                <span class="risk-max">/100</span>
+              </div>
+            </div>
+            <div class="risk-meta">
+              <span class="risk-pill risk-pill-high">High Risk</span>
+              <p>Likely bank phishing content. Verify before clicking or sharing.</p>
+            </div>
+          </div>
+          <div class="risk-stats">
+            <div class="stat">
+              <span class="stat-value" data-count-to="128">0</span>
+              <span class="stat-label">Messages Checked</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value" data-count-to="42">0</span>
+              <span class="stat-label">Screenshots Analysed</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value" data-count-to="19">0</span>
+              <span class="stat-label">High Risk Cases</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value" data-count-to="11">0</span>
+              <span class="stat-label">PDF Reports Generated</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card analysis-chart-card">
+          <div class="card-head">
+            <h2>Scam Pattern Overview</h2>
+            <div class="chart-legend">
+              <span class="legend-item"><i class="legend-swatch legend-swatch-total"></i>Total reports</span>
+              <span class="legend-item"><i class="legend-swatch legend-swatch-high"></i>High risk</span>
+            </div>
+          </div>
+          <div class="bar-chart">
+            <div class="bar-group">
+              <div class="bar-pair">
+                <div class="bar bar-total" style="--h: 92%;"></div>
+                <div class="bar bar-high" style="--h: 61%;"></div>
+              </div>
+              <span class="bar-label">Phishing</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar-pair">
+                <div class="bar bar-total" style="--h: 84%;"></div>
+                <div class="bar bar-high" style="--h: 55%;"></div>
+              </div>
+              <span class="bar-label">Delivery</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar-pair">
+                <div class="bar bar-total" style="--h: 68%;"></div>
+                <div class="bar bar-high" style="--h: 34%;"></div>
+              </div>
+              <span class="bar-label">Job</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar-pair">
+                <div class="bar bar-total" style="--h: 76%;"></div>
+                <div class="bar bar-high" style="--h: 48%;"></div>
+              </div>
+              <span class="bar-label">Bank</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar-pair">
+                <div class="bar bar-total" style="--h: 52%;"></div>
+                <div class="bar bar-high" style="--h: 22%;"></div>
+              </div>
+              <span class="bar-label">Govt</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar-pair">
+                <div class="bar bar-total" style="--h: 40%;"></div>
+                <div class="bar bar-high" style="--h: 18%;"></div>
+              </div>
+              <span class="bar-label">Investment</span>
+            </div>
+          </div>
+        </article>
+
+        <section class="feature-cards-section" aria-label="Current features">
+          <h2 class="section-title">What VeriFox Can Do</h2>
+          <div class="feature-cards-grid">
+            <article class="feature-card" data-topic="message link checker">
+              <span class="feature-icon">✉</span>
+              <h3>Message &amp; Link Checker</h3>
+              <p>Paste suspicious messages or URLs and get instant scam risk analysis.</p>
+            </article>
+            <article class="feature-card" data-topic="screenshot checker">
+              <span class="feature-icon">🖼</span>
+              <h3>Screenshot Checker</h3>
+              <p>Upload scam screenshots and VeriFox extracts text for analysis.</p>
+            </article>
+            <article class="feature-card" data-topic="singapore scam knowledge">
+              <span class="feature-icon">◇</span>
+              <h3>Singapore Scam Knowledge</h3>
+              <p>Uses Singapore-focused scam safety knowledge and RAG support.</p>
+            </article>
+            <article class="feature-card" data-topic="two agent verification">
+              <span class="feature-icon">✓</span>
+              <h3>Two-Agent Verification</h3>
+              <p>A second AI checker reviews the result before showing advice.</p>
+            </article>
+          </div>
+        </section>
+
+        <article class="card warning-trends-card">
+          <div class="card-head">
+            <h2>Recent Scam Warning Trends</h2>
+            <span class="badge badge-warning">Trending up</span>
+          </div>
+          <p class="trend-summary">Delivery scams and bank phishing messages are currently high-risk patterns.</p>
+          <svg class="trend-svg" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="trendFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f97316" stop-opacity="0.35" />
+                <stop offset="100%" stop-color="#f97316" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <polyline
+              points="0,80 40,72 80,74 120,55 160,58 200,36 240,40 300,14"
+              fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <polygon points="0,80 40,72 80,74 120,55 160,58 200,36 240,40 300,14 300,100 0,100" fill="url(#trendFill)" />
+          </svg>
+          <div class="trend-labels">
+            <span class="trend-label"><strong>Delivery</strong> +24%</span>
+            <span class="trend-label"><strong>Bank Phishing</strong> +18%</span>
+            <span class="trend-label"><strong>Job Scams</strong> +12%</span>
+          </div>
+        </article>
+
+        <article class="card how-it-works-card">
+          <div class="card-head">
+            <h2>How It Works</h2>
+          </div>
+          <ol class="steps-list">
+            <li>
+              <span class="step-circle">1</span>
+              <div>
+                <h3>Submit</h3>
+                <p>Paste a message, link, or upload a screenshot.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-circle">2</span>
+              <div>
+                <h3>Analyse</h3>
+                <p>VeriFox checks suspicious links, urgency, impersonation, OTP requests, and money pressure.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-circle">3</span>
+              <div>
+                <h3>Verify</h3>
+                <p>A second AI agent reviews the result for safer advice.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-circle">4</span>
+              <div>
+                <h3>Act Safely</h3>
+                <p>Receive a risk score, explanation, and recommended actions.</p>
+              </div>
+            </li>
+          </ol>
+        </article>
+
+        <article class="card pdf-report-card">
+          <div class="card-head">
+            <h2>PDF Report Generation</h2>
+            <span class="badge badge-live">Current feature</span>
+          </div>
+          <p>After a scam check, VeriFox can generate a downloadable PDF report with risk score, red flags, recommendations, and verification notes.</p>
+          <button class="btn btn-primary" id="pdf-report-btn">Generate Sample Report</button>
+          <p class="pdf-feedback" id="pdf-feedback" hidden>Sample report ready — this is a demo only. Real reports are generated after a live scam check.</p>
+        </article>
+
+        <article class="card future-features-card">
+          <div class="card-head">
+            <h2>Future Implementation</h2>
+            <span class="badge badge-future">Coming soon</span>
+          </div>
+          <ul class="future-list">
+            <li>
+              <h3>PDF Upload Checking</h3>
+              <p>Users will be able to upload suspicious PDF documents for scam analysis.</p>
+            </li>
+            <li>
+              <h3>Send to Relative</h3>
+              <p>Users will be able to send high-risk scam alerts to trusted family members.</p>
+            </li>
+            <li>
+              <h3>Voice Assistant</h3>
+              <p>Users will be able to speak to VeriFox using a voice assistant.</p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="card example-result-card" id="example-result">
+          <div class="card-head">
+            <h2>Sample VeriFox Analysis</h2>
+            <span class="badge badge-danger">High Risk</span>
+          </div>
+          <div class="result-summary-row">
+            <div class="result-score-badge">
+              <span class="result-score-value">88</span>
+              <span class="result-score-max">/100</span>
+            </div>
+            <div class="result-meta">
+              <p>Risk Level: <strong>High</strong></p>
+              <p>Possible Scam Type: <strong>Bank Phishing</strong></p>
+            </div>
+          </div>
+          <h3>Summary</h3>
+          <p>This message appears suspicious because it claims your account is locked and asks you to click an unknown link.</p>
+          <h3>Red Flags</h3>
+          <ul class="result-list">
+            <li>Urgent wording</li>
+            <li>Suspicious link</li>
+            <li>Bank impersonation</li>
+            <li>Request for sensitive information</li>
+          </ul>
+          <h3>Recommended Actions</h3>
+          <ul class="result-list">
+            <li>Do not click the link</li>
+            <li>Do not share OTPs or passwords</li>
+            <li>Verify through official bank channels</li>
+          </ul>
+        </article>
+      </section>
+
+      <footer class="footer-note">
+        <p class="disclaimer-text">VeriFox provides scam safety guidance based on available information and retrieved scam-safety knowledge. It does not replace official advice from banks, ScamShield, or the Singapore Police Force. If money or sensitive information was shared, contact the relevant official organisation immediately.</p>
+        <p class="footer-tagline">VeriFox &mdash; Ask VeriFox before you trust.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Botpress Webchat -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2026/07/06/12/20260706125051-XEEGPYD7.js" defer></script>
+</body>
+</html>
